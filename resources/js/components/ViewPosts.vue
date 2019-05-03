@@ -60,7 +60,7 @@ export default {
         });
     },
     deletePost(id) {
-      fetch(`http://neo/api/posts/${id}`, {
+      fetch(`http://kalistratov.bitimephi.ru/api/posts/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

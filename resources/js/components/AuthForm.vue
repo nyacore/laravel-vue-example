@@ -42,7 +42,7 @@ export default {
       }
     },
     submitForm() {
-      fetch("http://neo/api/auth", {
+      fetch("http://kalistratov.bitimephi.ru/api/auth", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
