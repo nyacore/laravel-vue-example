@@ -2,7 +2,7 @@
   <v-layout wrap row align-center justify-start>
     <v-flex grow xs3 v-for="post in posts" :key="post.id">
       <v-card class="ma-2" dark>
-        <v-img v-bind:src="'http://kalistratov.bitimephi.ru/' + post.image" aspect-ratio="2.75"></v-img>
+        <v-img v-bind:src="'http://neo.ru/' + post.image" aspect-ratio="2.75"></v-img>
 
         <v-card-title primary-title>
           <div>
@@ -52,7 +52,7 @@ export default {
     },
     getPosts() {
       this.posts = [];
-      fetch("http://kalistratov.bitimephi.ru/api/posts")
+      fetch("http://neo.ru/api/posts")
         .then(r => r.json())
         .then(result => {
           this.posts = result.reverse();
@@ -60,7 +60,7 @@ export default {
         });
     },
     deletePost(id) {
-      fetch(`http://kalistratov.bitimephi.ru/api/posts/${id}`, {
+      fetch(`http://neo.ru/api/posts/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

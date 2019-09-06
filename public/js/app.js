@@ -238,7 +238,7 @@ __webpack_require__.r(__webpack_exports__);
     submitForm: function submitForm() {
       var _this = this;
 
-      fetch("http://kalistratov.bitimephi.ru/api/auth", {
+      fetch("http://neo.ru/api/auth", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -323,7 +323,7 @@ __webpack_require__.r(__webpack_exports__);
       formData.append("title", this.title);
       formData.append("text", this.text);
       formData.append("image", this.file);
-      fetch("http://kalistratov.bitimephi.ru/api/posts", {
+      fetch("http://neo.ru/api/posts", {
         method: "POST",
         headers: {
           Authorization: "Bearer ".concat(window.localStorage.getItem("token")),
@@ -394,7 +394,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    fetch("http://kalistratov.bitimephi.ru/api/posts/".concat(this.id), {
+    fetch("http://neo.ru/api/posts/".concat(this.id), {
       method: "GET",
       headers: {
         Accept: "application/json"
@@ -569,7 +569,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       this.posts = [];
-      fetch("http://kalistratov.bitimephi.ru/api/posts").then(function (r) {
+      fetch("http://neo.ru/api/posts").then(function (r) {
         return r.json();
       }).then(function (result) {
         _this.posts = result.reverse();
@@ -579,7 +579,7 @@ __webpack_require__.r(__webpack_exports__);
     deletePost: function deletePost(id) {
       var _this2 = this;
 
-      fetch("http://kalistratov.bitimephi.ru/api/posts/".concat(id), {
+      fetch("http://neo.ru/api/posts/".concat(id), {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -3066,7 +3066,7 @@ var render = function() {
             [
               _c("v-img", {
                 attrs: {
-                  src: "http://kalistratov.bitimephi.ru/" + post.image,
+                  src: "http://neo.ru/" + post.image,
                   "aspect-ratio": "2.75"
                 }
               }),

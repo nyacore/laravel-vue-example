@@ -39,7 +39,7 @@ export default {
     };
   },
   mounted() {
-    fetch(`http://kalistratov.bitimephi.ru/api/posts/${this.id}`, {
+    fetch(`http://neo.ru/api/posts/${this.id}`, {
       method: "GET",
       headers: {
         Accept: "application/json"

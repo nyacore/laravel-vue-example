@@ -45,7 +45,7 @@ export default {
       formData.append("title", this.title);
       formData.append("text", this.text);
       formData.append("image", this.file);
-      fetch("http://kalistratov.bitimephi.ru/api/posts", {
+      fetch("http://neo.ru/api/posts", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${window.localStorage.getItem("token")}`,
